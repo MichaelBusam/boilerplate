@@ -1,0 +1,56 @@
+{
+    "name": "michaelbusam/boilerplate",
+    "description": "Boilerplate for Laravel Packages",
+    "type": "package",
+    "keywords": ["laravel","package", "package development"],
+    "homepage" : "https://github.com/:vendor/:package_name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Busam",
+            "email": "michael@busam.online"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "laravel/framework": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~6.0",
+        "phpunit/phpunit" : "~9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichaelBusam\\Boilerplate\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "MichaelBusam\\Boilerplate\\Test\\": "tests"
+        }
+    },
+    "extra" : {
+        "laravel" : {
+            "providers" : [
+                "MichaelBusam\\Boilerplate\\BoilerplateServiceProvider"
+            ],
+            "aliases" : {
+                "Boilerplate" : "MichaelBusam\\Boilerplate\\Facades\\BoilerplateFacade"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "testbench": "composer require --dev \"orchestra/testbench-browser-kit=~6.0\" \"orchestra/database=~6.0\""
+    },
+    "config": {
+        "sort-packages": true
+    }
+
+}
