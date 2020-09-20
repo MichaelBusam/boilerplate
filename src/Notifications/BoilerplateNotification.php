@@ -1,6 +1,6 @@
 <?php
 
-namespace MichaelBusam\Boilerplate;
+namespace MichaelBusam\Boilerplate\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
